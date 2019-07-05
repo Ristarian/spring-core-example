@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "mp3player" class = "spring.core.Mp3Player">
+    </bean>
+
+    <bean id = "mp4player" class = "spring.core.Mp4Player">
+    </bean>
+
+    <bean id = "mp3player" class = "spring.core.Mp5Player">
+    </bean>
+    <bean id = "playerseller" class = "spring.core.PlayerSeller">
+        <constructor-arg name = "player" ref = "mp5player"></constructor-arg>
+    </bean>
+
+</beans>
