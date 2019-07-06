@@ -3,6 +3,10 @@ package spring.core;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import spring.core.injection.UserConfiguration;
+import spring.core.injection.UserService;
+
+import java.io.OutputStream;
 
 public class Runner {
 
@@ -16,6 +20,9 @@ public class Runner {
 
         // Konfiguracja jawna i automatyczna
         ApplicationContext context = new AnnotationConfigApplicationContext(PlayerConfiguration.class);
-        context.getBean("playerSeller", PlayerSeller.class).sell();
+        context.getBean("PlayerSeller", PlayerSeller.class).sell();
+
+        ApplicationContext injection = new AnnotationConfigApplicationContext(UserConfiguration.class);
+        //System.out.println(userService.getUserField);
     }
 }
