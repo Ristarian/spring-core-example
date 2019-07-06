@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PlayerSeller{
+public class PlayerSeller {
 
-    private final Player player;
+    private final  Player player;
 
-    public PlayerSeller(@Qualifier("mp5Player") Player player) {
+    public PlayerSeller(@Qualifier ("mp3player") Player player) {
             this.player = player;
     }
 
