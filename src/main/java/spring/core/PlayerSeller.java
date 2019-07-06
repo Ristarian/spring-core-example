@@ -8,7 +8,7 @@ public class PlayerSeller {
 
     private final  Player player;
 
-    public PlayerSeller(@Qualifier ("mp3player") Player player) {
+    public PlayerSeller(@Qualifier ("mp4Player") Player player) {
             this.player = player;
     }
 
