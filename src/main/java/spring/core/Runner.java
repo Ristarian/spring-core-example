@@ -29,5 +29,7 @@ public class Runner {
         System.out.println(userService.getUserController());
         System.out.println(userService.getUserSetter());
 
+        ApplicationContext localDateTime = new AnnotationConfigApplicationContext(LocalDateTimeConfiguration.class);
+        localDateTime.getBean("singletonBean", LocalDateTimeConfiguration.class).localDateTime();
     }
 }
